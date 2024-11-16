@@ -1,0 +1,88 @@
+---
+title: "Final Report"
+author: "Chenyang Li"
+date: "2024-11-13"
+output: html_document
+---
+
+```{r, set-chunk-opts, echo = FALSE}
+library(knitr)
+opts_chunk$set(
+  echo = TRUE, warning = FALSE, message = FALSE
+)
+```
+
+# Load Data
+
+```{r, load-data}
+here::i_am("report.Rmd")
+data <- readRDS(
+  file = here::here("output/clean_data.rds")
+)
+```
+
+# Descriptive Analysis
+
+## Tabular analysis
+
+```{r, table}
+# Summary Statistics of Continuous Variables
+continuous_vars_t <- readRDS(
+  file = here::here("output/Summary_Statistics_Continuous.rds")
+)
+print(continuous_vars_t)
+
+# Gender Distribution
+gender_table <- readRDS(
+  file = here::here("output/Gender_Distribution.rds")
+)
+print(gender_table)
+
+# Status Distribution
+disease_table <- readRDS(
+  file = here::here("output/Status_Distribution.rds")
+)
+print(disease_table)
+
+```
+
+## Graphical analysis
+### Histogram of Age Distribution
+
+```{r, plot-data}
+#| fig.align = "center",
+#| out.width = "600px"
+knitr::include_graphics(
+  here::here("output/histogram_plot.png")
+)
+```
+
+### Bar chart for Gender Distribution
+
+```{r}
+#| fig.align = "center",
+#| out.width = "600px"
+knitr::include_graphics(
+  here::here("output/bar_chart.png")
+)
+```
+
+### Violin Plot of Total Bilirubin stratified by Gender
+
+```{r}
+#| fig.align = "center",
+#| out.width = "600px"
+knitr::include_graphics(
+  here::here("output/violin_plot1.png")
+)
+```
+
+### Violin Plot Of Total Bilirubin Stratified by Liver Disease Status
+
+```{r}
+#| fig.align = "center",
+#| out.width = "600px"
+knitr::include_graphics(
+  here::here("output/violin_plot2.png")
+)
+```
