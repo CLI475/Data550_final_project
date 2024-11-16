@@ -50,3 +50,10 @@ To replicate the analysis, the following tools and libraries are required:
   - `here`: For file path management
   - `rmarkdown`: For report generation
 
+## How to Generate the Final Report
+- Clone the repository:
+   ```bash
+   git clone https://github.com/your_username/indian_liver_analysis.git
+   cd indian_liver_analysis
+- Ensure all required R packages are installed
+- Run the workflow using the Makefile
