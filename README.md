@@ -59,5 +59,5 @@ To replicate the analysis, the following tools and libraries are required:
 To synchronize the package environment and ensure all dependencies are installed:
 - Clone the repository from GitHub
 - Restore the Package Environment:
-  -  Using make install;
-  -  Alternatively, run renv::restore(prompt = FALSE) manually within R
+  -  Using `make install`;
+  -  Alternatively, run `renv::restore(prompt = FALSE)` manually within R
