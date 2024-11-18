@@ -54,3 +54,10 @@ To replicate the analysis, the following tools and libraries are required:
 - Clone the repository
 - Ensure all required R packages are installed
 - Run the workflow using the Makefile
+
+## Synchronizing the Package Repository
+To synchronize the package environment and ensure all dependencies are installed:
+- Clone the repository from GitHub
+- Restore the Package Environment:
+  -  Using make install;
+  -  Alternatively, run renv::restore(prompt = FALSE) manually within R
