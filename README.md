@@ -50,14 +50,27 @@ To replicate the analysis, the following tools and libraries are required:
   - `here`: For file path management
   - `rmarkdown`: For report generation
 
-## How to Generate the Final Report
-- Clone the repository
-- Ensure all required R packages are installed
-- Run the workflow using the Makefile
-
 ## Synchronizing the Package Repository
 To synchronize the package environment and ensure all dependencies are installed:
 - Clone the repository from GitHub
 - In an R console, use `setwd` and `getwd` to confirm that the working directory is the project directory.
 - Run `source("renv/activate.R")`
 - Run `make install` to restore the package environment
+
+## How to Generate the Final Report
+### Generate it locally:
+- Clone the repository
+- Run `make clean` to clean all files previously generated
+- Run `make install` to restore the package environment
+- Run `make` to generate the final report
+
+### Generate from the online Docker image
+- Run `docker pull chenyang88/final_image4` to pull my Docker image directly from DockerHub
+- Link to the image on DockerHub: https://hub.docker.com/repository/docker/chenyang88/final_image4/general
+- Run `make report/report.html` to generate the report
+
+### If you want to build up a local image for your own with this project
+- Run `make final_image4` to build up your local image
+- Run `docker run -v "$(pwd)"/report:/project/report final_image4` to generate the report.
+
+
