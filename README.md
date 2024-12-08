@@ -60,4 +60,4 @@ To synchronize the package environment and ensure all dependencies are installed
 - Clone the repository from GitHub
 - In an R console, use `setwd` and `getwd` to confirm that the working directory is the project directory.
 - Run `source("renv/activate.R")`
-- Run `renv::restore()` to restore the package environment
+- Run `make install` to restore the package environment
