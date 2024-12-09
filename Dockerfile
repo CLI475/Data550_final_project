@@ -3,6 +3,8 @@ FROM rocker/r-ubuntu as base
 
 WORKDIR /project
 
+RUN apt-get update && apt-get install -y pandoc
+
 RUN mkdir -p renv
 COPY renv.lock renv.lock
 COPY .Rprofile .Rprofile
@@ -19,6 +21,8 @@ RUN R -e "renv::restore()"
 FROM rocker/r-ubuntu
 
 WORKDIR /project
+
+RUN apt-get update && apt-get install -y pandoc
 
 COPY --from=base /project .
 
