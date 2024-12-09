@@ -32,3 +32,4 @@ final_image4: Dockerfile $(PROJECTFILES) $(RENVFILES)
 # Rule to build the report automatically in our container
 report/report.html:
 	docker run -v "$$(pwd)/report":/project/report chenyang88/final_image4
+	

@@ -65,12 +65,10 @@ To synchronize the package environment and ensure all dependencies are installed
 - Run `make` to generate the final report
 
 ### Generate from the online Docker image
-- Run `docker pull chenyang88/final_image4` to pull my Docker image directly from DockerHub
+- Run `make report/report.html` to generate the report, this will simultaneously pull the image repository and the report file will be synchronized to the report folder.
 - Link to the image on DockerHub: https://hub.docker.com/repository/docker/chenyang88/final_image4/general
-- Run `make report/report.html` to generate the report
 
 ### If you want to build up a local image for your own with this project
 - Run `make final_image4` to build up your local image
 - Run `docker run -v "$(pwd)"/report:/project/report final_image4` to generate the report.
-
 

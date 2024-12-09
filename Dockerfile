@@ -49,6 +49,5 @@ ENTRYPOINT ["bash", "-c", "\
   Rscript code/02make_plots.R && \
   Rscript code/03render_report.R && \
   mkdir -p report && \
-  cp output/report.pdf report/report.pdf"]
-
-
+  cp report.html report/report.html"]
+  
